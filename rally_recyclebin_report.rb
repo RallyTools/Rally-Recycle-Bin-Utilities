@@ -18,6 +18,9 @@ $my_base_url       = "https://rally1.rallydev.com/slm"
 $my_username       = "user@company.com"
 $my_password       = "password"
 $my_workspace      = "My Workspace"
+
+# jt - change $wsapi_version to "v2.0"
+# $wsapi_version     = "1.43"
 $wsapi_version     = "v2.0"
 
 $my_output_file         = "recyclebin.csv"
@@ -53,7 +56,11 @@ begin
 
   # Query for all Recycle Bin Items
   recycle_bin_query = RallyAPI::RallyQuery.new()
+  
+  # jt - change type to recyclebinentry
+  # recycle_bin_query.type = :recyclebin
   recycle_bin_query.type = :recyclebinentry
+  
   recycle_bin_query.fetch = true
 
   recycle_bin_query_results = @rally.find(recycle_bin_query)
