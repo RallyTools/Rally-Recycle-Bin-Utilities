@@ -19,7 +19,10 @@ $my_base_url       = "https://rally1.rallydev.com/slm"
 $my_username       = "user@company.com"
 $my_password       = "password"
 $my_workspace      = "My Workspace"
-$wsapi_version     = "1.43"
+
+# jt - change $wsapi_version to "v2.0"
+# $wsapi_version     = "1.43"
+$wsapi_version     = "v2.0"
 
 # File containing CSV list of items to delete from Recycle Bin
 $filename          = "recyclebin_todelete.csv"
